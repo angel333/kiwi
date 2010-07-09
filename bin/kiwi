@@ -583,7 +583,7 @@ setup
 #
 
 if [[ $# -eq 0 ]]; then
-  if [[ $(which rlwrap) ]]; then
+  if [[ $(which rlwrap >/dev/null) ]]; then
     rlwrap $KIWI_BIN repl
   else
     $KIWI_BIN repl
